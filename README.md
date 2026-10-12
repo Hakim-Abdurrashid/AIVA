@@ -1,19 +1,18 @@
-# AIVA
-American Computing Machinery's Autonomous Intelligent Verification Agents GitHub Repository.
-
 ## Folder Structure
 ```text
-aiva-agent-core/
-├── src/
-│   ├── parser/                  # Specification ingestion and structured requirement extraction
-│   ├── orchestration/           # LLM agent orchestration, prompt templates, and workflow logic
-│   ├── generator/               # Verification plan, test, assertion, and coverage generation
-│   ├── simulator/               # Automated simulator invocation, error recovery, and result parsing
-│   ├── feedback/                # Coverage-feedback ingestion and iterative test-refinement loop
-│   └── interface/               # Platform interfaces including CLI, API, or lightweight UI
-├── tests/
-│   ├── unit/                    # Unit tests for parser, generator, and orchestration modules
-│   └── integration/             # End-to-end workflow automation tests
-├── configs/                     # Reproducible run configurations, environment settings, and logging profiles
-├── docs/                        # Platform architecture documents, module interfaces, and user guides
-└── requirements.txt             # Python environment and package dependencies
+aiva-verification-groundtruth/
+├── rtl/
+│   ├── starter/                 # Starter DUTs (counter, ALU, FSM, simple FIFO)
+│   ├── intermediate/            # Intermediate DUTs (UART, round-robin arbiter, protocol controllers)
+│   └── advanced/                # Advanced benchmark targets (AXI-Lite peripherals, RISC-V components)
+├── specs/
+│   ├── templates/               # Standardized specification templates with numbered requirements
+│   └── documents/               # Natural-language specifications and expected behaviors for each DUT
+├── verification/
+│   ├── testbenches/             # Manually written reference testbenches
+│   ├── assertions/              # Hand-crafted reference assertions and safety properties
+│   ├── coverage/                # Reference functional coverage models
+│   └── scoreboards/             # Reference verification scoreboards and expected-result checkers
+├── defects/
+│   └── seeded_defects/          # Intentionally incorrect versions of DUTs categorized by defect taxonomy
+└── fpga/                        # Verification-oriented FPGA implementations, stimulus scripts, and constraints
